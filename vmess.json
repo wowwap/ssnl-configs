@@ -1,0 +1,5 @@
+{
+  "v": "2", "ps": "SSNL-VMESS-NL-8443", "add": "89.124.75.51", "port": "8443",
+  "id": "test-uuid", "aid": 0, "net": "tcp", "type": "none", 
+  "host": "v666969.hosted-by-vdsina.com", "path": "/", "tls": "none"
+}
