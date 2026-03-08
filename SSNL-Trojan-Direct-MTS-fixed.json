@@ -1,0 +1,70 @@
+{
+  "dns": {
+    "hosts": {},
+    "servers": ["1.1.1.1"],
+    "tag": "dns-module"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": ["http", "tls"],
+        "enabled": true,
+        "routeOnly": true
+      },
+      "tag": "socks"
+    }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "89.124.75.51",
+            "level": 8,
+            "password": "TJ_9k2mP7xQw",
+            "port": 2083
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": true,
+          "serverName": "89.124.75.51.nip.io"
+        }
+      },
+      "tag": "proxy"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
+      "tag": "direct"
+    }
+  ],
+  "remarks": "SSNL-Trojan-Direct-MTS",
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "outboundTag": "direct",
+        "protocol": ["bittorrent"],
+        "type": "field"
+      }
+    ]
+  }
+}

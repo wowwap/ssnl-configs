@@ -1,0 +1,76 @@
+{
+  "dns": {
+    "hosts": {},
+    "servers": ["1.1.1.1"],
+    "tag": "dns-module"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": ["http", "tls"],
+        "enabled": true,
+        "routeOnly": true
+      },
+      "tag": "socks"
+    }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "89.124.75.51",
+            "level": 8,
+            "password": "6741v2Sv++++",
+            "port": 443
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "v666969.hosted-by-vdsina.com"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "v666969.hosted-by-vdsina.com"
+          },
+          "path": "/AnUykM8Y7a8g5jicgNARrkwCVwbHrz"
+        }
+      },
+      "tag": "proxy"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
+      "tag": "direct"
+    }
+  ],
+  "remarks": "SSNL-Trojan-WS-NL",
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "outboundTag": "direct",
+        "protocol": ["bittorrent"],
+        "type": "field"
+      }
+    ]
+  }
+}
