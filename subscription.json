@@ -29,17 +29,17 @@
   "server": "89.124.75.51",
   "server_port": 443,
   "password": "6741v2Sv++++",
-  "tls": {
-   "enabled": true,
-   "server_name": "v666969.hosted-by-vdsina.com",
-   "insecure": false
-  },
   "transport": {
    "type": "ws",
    "path": "/AnUykM8Y7a8g5jicgNARrkwCVwbHrz",
    "headers": {
     "Host": "v666969.hosted-by-vdsina.com"
    }
+  },
+  "tls": {
+   "enabled": true,
+   "server_name": "v666969.hosted-by-vdsina.com",
+   "insecure": false
   }
  },
  {
@@ -48,6 +48,9 @@
   "server": "89.124.75.51",
   "server_port": 2083,
   "password": "TJ_9k2mP7xQw",
+  "transport": {
+   "type": "tcp"
+  },
   "tls": {
    "enabled": true,
    "server_name": "89.124.75.51.nip.io",
@@ -56,9 +59,6 @@
     "h2",
     "http/1.1"
    ]
-  },
-  "transport": {
-   "type": "tcp"
   }
  },
  {
@@ -67,17 +67,17 @@
   "server": "89.124.75.51",
   "server_port": 443,
   "uuid": "4cd5960e-4911-4d4d-b132-6e413c0247d6",
-  "tls": {
-   "enabled": true,
-   "server_name": "v666969.hosted-by-vdsina.com",
-   "insecure": false
-  },
   "transport": {
    "type": "ws",
    "path": "/FX7lQafyI04e8gRvz2aaHjqIWqZASI",
    "headers": {
     "Host": "v666969.hosted-by-vdsina.com"
    }
+  },
+  "tls": {
+   "enabled": true,
+   "server_name": "v666969.hosted-by-vdsina.com",
+   "insecure": false
   }
  }
 ]
