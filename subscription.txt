@@ -2,3 +2,4 @@ vmess://eyJ2IjoiMiIsInBzIjoiU1NOTC1WTUVTUy1OTC04NDQzIiwiYWRkIjoiODkuMTI0Ljc1LjUx
 ss://YWVzLTI1Ni1nY206c3MxMjM0NTY@89.124.75.51:8444#SSNL-SS-BBR-NL-8444
 trojan://6741v2Sv%2B%2B%2B%2B@89.124.75.51:443?path=%2FAnUykM8Y7a8g5jicgNARrkwCVwbHrz&type=ws&security=tls&sni=v666969.hosted-by-vdsina.com&peer=v666969.hosted-by-vdsina.com#SSNL-Trojan-WS-NL
 trojan://TJ_9k2mP7xQw@89.124.75.51:2083?peer=89.124.75.51.nip.io&sni=89.124.75.51.nip.io&alpn=h2%2Chttp%2F1.1&type=tcp#SSNL-Trojan-Direct-MTS
+vless://4cd5960e-4911-4d4d-b132-6e413c0247d6@89.124.75.51:443?path=%2FFX7lQafyI04e8gRvz2aaHjqIWqZASI&type=ws&security=tls&sni=v666969.hosted-by-vdsina.com&peer=v666969.hosted-by-vdsina.com#SSNL-VLESS-WS-NL
