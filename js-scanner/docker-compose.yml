@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  scraper:
+    build: .
+    container_name: freelance-scraper
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+    environment:
+      - LOG_LEVEL=info
+      - DB_PATH=/app/data/scanner.db
+      - OUTPUT_PATH=/app/data/output.json
+      - CRON_SCHEDULE=*/30 * * * *
+      - LIMIT=25
+    cap_add:
+      - SYS_ADMIN
+    security_opt:
+      - no-new-privileges:true
